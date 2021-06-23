@@ -1,0 +1,127 @@
+<template>
+    <div class="modalMain"
+        @click.self="darkModal()"
+    >
+        <div class="modalForm">
+            <div class="firstDiv">
+                <div class="photoDiv">
+                    <img class="photoTag" :src="require('../assets/MainAfter.jpg')">
+                </div>
+                <div class="infoButtonDiv">
+                    <div class="name">
+                        <div class="nameText">
+                            Concert Lil Pip
+                        </div>  
+                    </div>
+                    <div class="date">
+                        <div class="dateText">
+                            13 Июля 
+                        </div>
+                    </div>
+                    <div class="time">
+                        <div class="timeText">
+                            18 : 00
+                        </div>
+                    </div>
+                    <div class="mediaContent">
+                        <img class="mediaImg" :src="require('../assets/concert.jpg')">
+                    </div>
+                </div>
+            </div>
+            <div class="secDiv">
+                <div class="infoDiv">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nulla nam vel consectetur perspiciatis culpa facere dolores fugit autem omnis aperiam! 
+                    Accusamus facere quidem reiciendis fugiat culpa? Fugit pariatur qui ratione.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nulla nam vel consectetur perspiciatis culpa facere dolores fugit autem omnis aperiam! 
+                    Accusamus facere quidem reiciendis fugiat culpa? Fugit pariatur qui ratione.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nulla nam vel consectetur perspiciatis culpa facere dolores fugit autem omnis aperiam! 
+                    Accusamus facere quidem reiciendis fugiat culpa? Fugit pariatur qui ratione.
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import { mapActions } from 'vuex'
+ 
+export default {
+    methods: {
+        ...mapActions([
+            'OPEN_MODAL'
+        ]),
+        darkModal() {
+            this.OPEN_MODAL(null)
+        }
+    }
+}
+</script>
+
+<style scoped>
+    .modalMain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+    }
+    .modalForm {
+        width: 60%;
+        height: 80%;
+        background-color: white;
+        border-radius: 10px;
+        z-index: 2;
+    }
+    .firstDiv {
+        margin: 2%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1%
+    }
+    .photoTag {
+        border-radius: 5px 1px 1px 1px;
+        box-shadow: 0 0 3px #444;
+        max-width: 100%;
+    }
+    .infoButtonDiv {
+        max-width: 100%;
+        font-family: Roboto, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .name {
+        padding: 5% 5% 5% 5%;
+        margin: 0 0 5% 0;
+        border-bottom: black;
+        border-width: 1px;
+        border-style: none none solid none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .time {
+        margin-bottom: 5%;
+    }
+    .timeText {
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .mediaImg {
+        width: 100%;
+    }
+    .secDiv {
+        margin: 2%;
+    }
+    .infoDiv {
+        font-family: Roboto, sans-serif;
+        text-align: justify;
+    }
+</style>
