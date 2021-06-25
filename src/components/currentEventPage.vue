@@ -23,6 +23,9 @@
                             18 : 00
                         </div>
                     </div>
+                    <div class="buyTicker">
+                        <button>Купить билет</button>
+                    </div>
                     <div class="mediaContent">
                         <img class="mediaImg" :src="require('../assets/concert.jpg')">
                     </div>
@@ -108,11 +111,35 @@ export default {
         font-weight: 700;
     }
     .time {
-        margin-bottom: 5%;
+        margin-bottom: 1%;
     }
     .timeText {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 800;
+    }
+    .buyTicker {
+        width: 70%;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .buyTicker button {
+        padding: 7%;
+        border-color: black black black black;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 1px;
+        outline: none;
+        font-family: sans-serif;
+        font-size: 16px;
+        background-color: white;
+        transition: 0.2s linear;
+    }
+    .buyTicker button:hover {
+        background-color: black;
+        color: white;
+        transform: scale(1.1);
     }
     .mediaImg {
         width: 100%;

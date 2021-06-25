@@ -11,11 +11,6 @@
                     мероприятий и услуг <br>
                 </div>
             </div>
-            <div style="color: white;">
-                <h2 style="font-famity: sans-serif;">
-                Да хуй знает как это дизайнить
-                </h2>
-            </div>
             <div class="navi-area">
                 <div class="search-area">
                     <div class="material-icons">
@@ -61,7 +56,6 @@ export default {
 
 <style scoped>
     .bod {
-        background-color:dimgray;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -91,7 +85,7 @@ export default {
         align-items: center;
     }
     .logo-text {
-        color: white;
+        color: black;
         font-family: Roboto, sans-serif; 
     }
     .navi-area {
@@ -99,7 +93,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
+        color: black;
         cursor: pointer;
     }
     .block-content {
@@ -125,10 +119,11 @@ export default {
         cursor: pointer;
         transition: 0.1s linear;
     }
-    .block-content-item::selection {
+    .block-content-item span::selection {
         background: transparent;
     }
     .block-content-item:hover {
+        background-color: whitesmoke;
         height: 25%;
         font-size: 18px;
         width: 16%;

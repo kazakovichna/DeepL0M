@@ -42,6 +42,9 @@ export default {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+  .bod {
+    background-color: #F2F2F2;
+  }
   .black-screen {
       width: 100%;
       height: 100%;

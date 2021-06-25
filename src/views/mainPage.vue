@@ -25,7 +25,7 @@
                 @click="openModal(event)"
                 
             >
-                <img  :src="require('@/assets/MainAfter.jpg')">
+                <img  :src="require('@/assets/exampleImage.jpg')">
                 <div>M A Z A S H I B</div>
             </div>
         </div>
