@@ -13,6 +13,13 @@ const routes = [{
         meta: { layout: 'empty', auth: false },
         component: () =>
             import ('../views/login')
+    },
+    {
+        path: '/orgPage',
+        name: 'orgPage',
+        meta: { layout: 'main', auth: true },
+        component: () =>
+            import ('../views/orgPage')
     }
 ]
 

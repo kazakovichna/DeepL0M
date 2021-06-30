@@ -43,6 +43,11 @@
                     Nulla nam vel consectetur perspiciatis culpa facere dolores fugit autem omnis aperiam! 
                     Accusamus facere quidem reiciendis fugiat culpa? Fugit pariatur qui ratione.
                 </div>
+                <div class="textDiv"
+                    @click="goToOrgPage()"
+                >
+                    OrgName
+                </div>
             </div>
         </div>
     </div>
@@ -58,6 +63,10 @@ export default {
         ]),
         darkModal() {
             this.OPEN_MODAL(null)
+        },
+        goToOrgPage() {
+            this.darkModal()
+            this.$router.push('orgPage')
         }
     }
 }
@@ -146,9 +155,13 @@ export default {
     }
     .secDiv {
         margin: 2%;
+        font-family: Roboto, sans-serif;
     }
     .infoDiv {
-        font-family: Roboto, sans-serif;
         text-align: justify;
+    }
+    .textDiv {
+        font-weight: 600;
+        cursor: pointer;
     }
 </style>

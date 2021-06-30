@@ -2,7 +2,9 @@
     <div class="bod">
         <div class="navigation">
             <div class="logo-area">
-                <div class="logo">
+                <div class="logo"
+                    @click="goToMain()"
+                >
                     <span>LOGO</span>
                 </div>
                 <div class="logo-text">
@@ -12,11 +14,6 @@
                 </div>
             </div>
             <div class="navi-area">
-                <div class="search-area">
-                    <div class="material-icons">
-                        search
-                    </div>
-                </div>
                 <div class="privite-area">
                     <div class="material-icons">
                         account_circle
@@ -50,7 +47,14 @@ export default {
             'Lectures',
             'Tures'
         ]  
-    })
+    }),
+    methods: {
+      goToMain() {
+          if(this.$route.name != 'main') {
+            this.$router.push('/')
+          } 
+      }  
+    },
 }
 </script>
 
@@ -83,6 +87,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
     .logo-text {
         color: black;
@@ -123,9 +128,9 @@ export default {
         background: transparent;
     }
     .block-content-item:hover {
-        background-color: whitesmoke;
+        background-color: inherit;
         height: 25%;
-        font-size: 18px;
+        font-size: 24px;
         width: 16%;
     }
 </style>

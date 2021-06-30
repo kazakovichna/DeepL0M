@@ -9,7 +9,7 @@
                 <div class="searcgInputDiv">
                     <input class="searcgInput" type="text">
                     <div class="searchBtnDIv">
-                        <div class="material-icons">
+                        <div class="matrial-icons">
                             search
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                 @click="openModal(event)"
                 
             >
-                <img  :src="require('@/assets/exampleImage.jpg')">
+                <img  :src="require('@/assets/MainAfter.jpg')">
                 <div>M A Z A S H I B</div>
             </div>
         </div>
@@ -72,7 +72,6 @@ export default {
             const fac = new FastAverageColor();
             this.imgMas[i].div = document.getElementById(i);
             this.imgMas[i].img = fac.getColor(this.imgMas[i].div.querySelector('img'));
-            console.log(this.imgMas[i].img)
         }
         }
     },
@@ -84,6 +83,7 @@ export default {
 
 <style scoped>
     .bod {
+        background-color: #EEEEEE;
         width: 100%;
         display: flex;
         flex-direction: column;
